@@ -32,14 +32,19 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          title: Text("Flutter Container"),
+          title: Text("Hello"),
         ),
         body: Center(
           child: Container(
-            width: 100,
+            width: 200,
             height: 100,
-            color: Colors.limeAccent,
-            child: Text("Hellon Devops!!"),
+            color: Colors.blueGrey,
+            child: Center(
+              child: Text(
+                'This is center of Container',
+                style: TextStyle(color: Colors.white),
+              ),
+            ),
           ),
         ));
   }
