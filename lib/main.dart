@@ -34,7 +34,19 @@ class _MyHomePageState extends State<MyHomePage> {
         appBar: AppBar(
           title: Text("Hello"),
         ),
-        body: TextButton(
+        body: OutlinedButton(
+          child: Text('Outlined here'),
+          onPressed: () {
+            print("Text Button Tappad!");
+          },
+        )
+        /*ElevatedButton(
+          child: Text(' Elevated here'),
+          onPressed: () {
+            print("Text Button Tappad!");
+          },
+        )
+       TextButton(
           child: Text('Click here'),
           onPressed: () {
             print("Text Button Tappad!");
@@ -42,6 +54,8 @@ class _MyHomePageState extends State<MyHomePage> {
           onLongPress: () {
             print("LongPress!s!");
           },
-        ));
+        ),**/
+
+        );
   }
 }
