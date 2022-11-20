@@ -1,3 +1,6 @@
+import 'dart:convert';
+import 'dart:ui';
+
 import 'package:flutter/material.dart';
 
 void main() {
@@ -34,28 +37,12 @@ class _MyHomePageState extends State<MyHomePage> {
         appBar: AppBar(
           title: Text("Hello"),
         ),
-        body: OutlinedButton(
-          child: Text('Outlined here'),
-          onPressed: () {
-            print("Text Button Tappad!");
-          },
-        )
-        /*ElevatedButton(
-          child: Text(' Elevated here'),
-          onPressed: () {
-            print("Text Button Tappad!");
-          },
-        )
-       TextButton(
-          child: Text('Click here'),
-          onPressed: () {
-            print("Text Button Tappad!");
-          },
-          onLongPress: () {
-            print("LongPress!s!");
-          },
-        ),**/
-
-        );
+        body: Center(
+          child: Container(
+            width: 100,
+            height: 100,
+            child: Image.asset('assets/images/images.jpg'),
+          ),
+        ));
   }
 }
