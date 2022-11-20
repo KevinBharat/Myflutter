@@ -34,14 +34,14 @@ class _MyHomePageState extends State<MyHomePage> {
         appBar: AppBar(
           title: Text("Hello"),
         ),
-        // ignore: prefer_const_constructors
-        body: Text(
-          'Hello Flutter Devs',
-          style: TextStyle(
-              fontSize: 25,
-              color: Colors.lightBlue,
-              fontWeight: FontWeight.bold,
-              backgroundColor: Colors.deepOrangeAccent),
+        body: TextButton(
+          child: Text('Click here'),
+          onPressed: () {
+            print("Text Button Tappad!");
+          },
+          onLongPress: () {
+            print("LongPress!s!");
+          },
         ));
   }
 }
