@@ -34,18 +34,14 @@ class _MyHomePageState extends State<MyHomePage> {
         appBar: AppBar(
           title: Text("Hello"),
         ),
-        body: Center(
-          child: Container(
-            width: 200,
-            height: 100,
-            color: Colors.blueGrey,
-            child: Center(
-              child: Text(
-                'This is center of Container',
-                style: TextStyle(color: Colors.white),
-              ),
-            ),
-          ),
+        // ignore: prefer_const_constructors
+        body: Text(
+          'Hello Flutter Devs',
+          style: TextStyle(
+              fontSize: 25,
+              color: Colors.lightBlue,
+              fontWeight: FontWeight.bold,
+              backgroundColor: Colors.deepOrangeAccent),
         ));
   }
 }
