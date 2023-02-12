@@ -1,6 +1,5 @@
 import 'dart:convert';
 import 'dart:ui';
-import 'dart:async';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -37,12 +36,36 @@ class _MyHomePageState extends State<MyHomePage> {
         appBar: AppBar(
           title: Text("Hello"),
         ),
-        body: Center(
-          child: Container(
-            width: 100,
-            height: 100,
-            child: Image.asset('assets/images/images.jpg'),
-          ),
-        ));
+        body: Container(
+            width: 500,
+            child: /*Column(
+          children: [
+            Text(
+              "A",
+              style: TextStyle(fontSize: 25),
+            ),
+            Text(
+              "B",
+              style: TextStyle(fontSize: 25),
+            )
+          ],
+        )*/
+                Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              //mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              //mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: [
+                Text(
+                  "A",
+                  style: TextStyle(fontSize: 25),
+                ),
+                Text(
+                  "B",
+                  style: TextStyle(fontSize: 25),
+                ),
+                ElevatedButton(onPressed: () {}, child: Text("click"))
+              ],
+            )));
   }
 }
