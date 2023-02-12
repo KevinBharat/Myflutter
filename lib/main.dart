@@ -36,36 +36,32 @@ class _MyHomePageState extends State<MyHomePage> {
         appBar: AppBar(
           title: Text("Hello"),
         ),
-        body: Container(
-            width: 500,
-            child: /*Column(
-          children: [
-            Text(
-              "A",
-              style: TextStyle(fontSize: 25),
-            ),
-            Text(
-              "B",
-              style: TextStyle(fontSize: 25),
-            )
-          ],
-        )*/
-                Row(
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-              //mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-              //mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              crossAxisAlignment: CrossAxisAlignment.center,
-              children: [
-                Text(
-                  "A",
-                  style: TextStyle(fontSize: 25),
+        body: Center(
+            child: InkWell(
+          onTap: () {
+            print("ontab");
+          },
+          onDoubleTap: () {
+            print("onDoubleTab");
+          },
+          onLongPress: () {
+            print("onLongTab");
+          },
+          child: Container(
+              width: 200,
+              height: 200,
+              color: Colors.amber,
+              child: Center(
+                child: InkWell(
+                  onTap: () {
+                    print("Text Widget Tapped");
+                  },
+                  child: Text(
+                    "Click here",
+                    style: TextStyle(fontSize: 23, fontWeight: FontWeight.w800),
+                  ),
                 ),
-                Text(
-                  "B",
-                  style: TextStyle(fontSize: 25),
-                ),
-                ElevatedButton(onPressed: () {}, child: Text("click"))
-              ],
-            )));
+              )),
+        )));
   }
 }
